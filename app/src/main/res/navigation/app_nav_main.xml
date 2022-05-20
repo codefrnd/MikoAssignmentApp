@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_main"
+    app:startDestination="@id/timerFragment">
+
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.codefrnd.mikoassignmentapp.ui.fragments.timerfragment.TimerFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_timerFragment_to_voiceRecorderFragment"
+            app:destination="@id/voiceRecorderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.codefrnd.mikoassignmentapp.ui.fragments.camerafragment.CameraFragment"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/voiceRecorderFragment"
+        android:name="com.codefrnd.mikoassignmentapp.ui.fragments.voicerecorderfragment.VoiceRecorderFragment"
+        android:label="Recorder"
+        tools:layout="@layout/fragment_voice_recorder" />
+</navigation>
